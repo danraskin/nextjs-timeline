@@ -1,9 +1,0 @@
-const AuthForm = ()=> {
-    return (
-        <Card>
-            
-        </Card>
-    );
-}
-
-export default AuthForm;

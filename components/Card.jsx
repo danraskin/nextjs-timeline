@@ -1,7 +1,6 @@
 const Card = ({ children }) => {
     return (
         <div className ="card">
-        CARD
           {children}
         </div>
     );
