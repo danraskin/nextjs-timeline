@@ -58,8 +58,69 @@ const AuthForm = ({mode})=> {
                 </div>
                 <form onSubmit={handleSubmit}>
                     {mode === 'register' && (
-                        <div></div>
+                        <div>
+                            <div>
+                                <div>Firt Name</div>
+                                <input
+                                    required
+                                    placeholder="First Name"
+                                    value={formState.firstName}
+                                    onChange={(e) =>
+                                        setFormState((s) => ({...s, firstName: e.target.value}))
+                                    }
+                                />
+                            </div>
+                            <div>
+                                <div>Last Name</div>
+                                <input
+                                    required
+                                    placeholder="Last Name"
+                                    value={formState.firstName}
+                                    onChange={(e) =>
+                                        setFormState((s) => ({...s, lastName: e.target.value}))
+                                    }
+                                />
+                            </div>
+                        </div>
                     )}
+                    <div>
+                        <div>Email</div>
+                        <input
+                            required
+                            placeholder="Email"
+                            value={formState.email}
+                            onChange={(e) =>
+                                setFormState((s) => ({...s, lastName: e.target.value}))
+                            }
+                        />
+                    </div>
+                    <div>
+                        <div>Password</div>
+                        <input
+                            required
+                            placeholder="Password"
+                            value={formState.password}
+                            onChange={(e) =>
+                                setFormState((s) => ({...s, lastName: e.target.value}))
+                            }
+                        />
+                    </div>
+                    <div>
+                        <div>
+                            <span>
+                                <Link
+                                    href={content.linkUrl}
+                                >
+                                    {content.linkText}
+                                </Link>
+                            </span>
+                        </div>
+                        <div>
+                            <button type="submit" intent="secondary">
+                                {content.buttonText}
+                            </button>
+                        </div>
+                    </div>
                 </form>
             </div>
             
