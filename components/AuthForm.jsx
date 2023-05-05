@@ -1,6 +1,6 @@
 'use client';
 
-// //import { register, signin } from "@/lib/api";
+import { register, signin } from "@/lib/api";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Router from "next/router";
@@ -34,14 +34,16 @@ const AuthForm = ({mode})=> {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log('handleSubmit')
         try {
-            // if (mode === 'register') {
-            //     await registerContent(formState);
-            //     console.log('registered');
-            // } else {
-            //     await signin(formState);
-            // }
-            console.log(formState);
+            if (mode === 'register') {
+                console.log('registered');
+                await register(formState);
+            } else {
+                console.log('huh?')
+                await signin(formState);
+            }
+            // console.log(formState);
             // router.push('/home');
             setFormState(initial);
         } catch(err) {
@@ -116,14 +118,13 @@ const AuthForm = ({mode})=> {
                             </span>
                         </div>
                         <div>
-                            <button type="submit" intent="secondary">
+                            <button type="submit">
                                 {content.buttonText}
                             </button>
                         </div>
                     </div>
                 </form>
             </div>
-            
         </Card>
     )
 }
