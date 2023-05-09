@@ -67,8 +67,9 @@ const AuthForm = ({mode})=> {
                                     required
                                     placeholder="First Name"
                                     value={formState.firstName}
-                                    onChange={(e) =>
+                                    onChange={(e) => 
                                         setFormState((s) => ({...s, firstName: e.target.value}))
+                                    
                                     }
                                 />
                             </div>
@@ -77,7 +78,7 @@ const AuthForm = ({mode})=> {
                                 <input
                                     required
                                     placeholder="Last Name"
-                                    value={formState.firstName}
+                                    value={formState.lastName}
                                     onChange={(e) =>
                                         setFormState((s) => ({...s, lastName: e.target.value}))
                                     }
@@ -92,7 +93,7 @@ const AuthForm = ({mode})=> {
                             placeholder="Email"
                             value={formState.email}
                             onChange={(e) =>
-                                setFormState((s) => ({...s, lastName: e.target.value}))
+                                setFormState((s) => ({...s, email: e.target.value}))
                             }
                         />
                     </div>
@@ -103,7 +104,7 @@ const AuthForm = ({mode})=> {
                             placeholder="Password"
                             value={formState.password}
                             onChange={(e) =>
-                                setFormState((s) => ({...s, lastName: e.target.value}))
+                                setFormState((s) => ({...s, password: e.target.value}))
                             }
                         />
                     </div>
